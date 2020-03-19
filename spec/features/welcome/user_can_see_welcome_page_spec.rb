@@ -7,6 +7,6 @@ RSpec.describe "roots to welcome page w/ links", type: :feature do
 
     page.has_css?(".welcome_message")
     expect(page).to have_link("All Shelters", href: "/shelters")
-    expect(page).to have_link("Add New Shelter", href: "/shelters/new")
+    expect(page).to have_link("Add Shelter", href: "/shelters/new")
   end
 end
