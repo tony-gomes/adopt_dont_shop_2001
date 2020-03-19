@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "roots to welcome page w/ links", type: :feature do
-  it "can see welcome#index" do
+RSpec.describe "As a visitor", type: :feature do
+  it "I get rooted to /" do
 
     visit "/"
 
