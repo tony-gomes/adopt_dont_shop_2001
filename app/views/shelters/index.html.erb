@@ -1,5 +1,7 @@
 <h1>All Shelters</h1>
 
 <% @shelters.each do |shelter| %>
-  <h3><%= shelter.name %></h3>
+  <h3 class="shelter_name_index"><%= shelter.name %></h3>
 <% end %>
+
+<%= link_to "New Shelter", "/shelters/new" %>

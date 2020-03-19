@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "As a visitor", type: :feature do
-  it "I can see all shelters names when I visit /shelters" do
+RSpec.describe "As a visitor" do
+  it "I can destroy a shelter" do
     shelter_1 = Shelter.create(name: "Doggie Dog World",
                                address: "123 Main St.",
                                city: "Denver",
@@ -12,16 +12,16 @@ RSpec.describe "As a visitor", type: :feature do
                                city: "Denver",
                                state: "CO",
                                zip: "80212")
-    shelter_3 = Shelter.create(name: "Dog Lovers",
-                               address: "456 Rocky Road",
-                               city: "Lala Land",
-                               state: "North Nowhere",
-                               zip: "90210")
 
-    visit "/shelters"
-
+    visit '/shelters'
     expect(page).to have_content(shelter_1.name)
+
+    visit '/shelters/#{shelter_1.id}'
+
+    click_on "Delete"
+
+    expect(current_path).to eq("/shelters")
+    expect(page).to have_no_content(shelter_1.name)
     expect(page).to have_content(shelter_2.name)
-    expect(page).to have_content(shelter_3.name)
   end
 end

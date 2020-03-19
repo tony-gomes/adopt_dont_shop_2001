@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "single shelter page", type: :feature do
-  it "can see single shelter name, address, city, state, zip" do
+RSpec.describe "As a visitor", type: :feature do
+  it "I can see single shelter name, address, city, state, zip" do
     shelter_1 = Shelter.create(name: "Doggie Dog World",
                                address: "123 Main St.",
                                city: "Denver",
@@ -25,6 +25,7 @@ RSpec.describe "single shelter page", type: :feature do
     expect(page).to have_content(shelter_1.city)
     expect(page).to have_content(shelter_1.state)
     expect(page).to have_content(shelter_1.zip)
+
     expect(page).to have_no_content(shelter_2.name)
     expect(page).to have_no_content(shelter_3.name)
   end
