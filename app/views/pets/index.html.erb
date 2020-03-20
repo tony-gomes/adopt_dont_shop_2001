@@ -1,0 +1,18 @@
+<h1 class="page_header_title">All Pets</h1>
+
+<div class="pet_matrix" >
+  <% @pets.each do |pet| %>
+    <div class="pet_block">
+      <div class="pet_image_block">
+        <%= image_tag(pet.profile_img) %>
+      </div>
+
+      <div class="pet_data_block">
+        <h3 class="pet_data_block_name"><%= pet.name %></h3>
+        <p class="pet_data_block_age">age: <%= pet.approximate_age %> </p>
+        <p class="pet_data_block_sex">sex: <%= pet.sex %></p>
+        <p class="pet_data_block_shelter">current shelter: <%= pet.current_shelter_id %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
