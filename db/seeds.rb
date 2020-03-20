@@ -23,3 +23,18 @@ shelter_3 = Shelter.create(name: "Dog Lovers",
                            city: "Lala Land",
                            state: "North Nowhere",
                            zip: "90210")
+
+pet_1 = Pet.create(profile_img: "https://via.placeholder.com/150",
+                   name: "Athena",
+                   description: "Lorem Ipsum",
+                   approximate_age: 8,
+                   sex: "Nah",
+                   adoption_status: "Deeply Loved",
+                   current_shelter_id: 1)
+pet_2 = Pet.create(profile_img: "https://via.placeholder.com/150",
+                   name: "Delphi",
+                   description: "Lorem Ipsum",
+                   approximate_age: 4,
+                   sex: "Nope",
+                   adoption_status: "Loved Deeply",
+                   current_shelter_id: 2)
