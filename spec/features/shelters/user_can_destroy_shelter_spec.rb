@@ -16,7 +16,7 @@ RSpec.describe "As a visitor" do
     visit '/shelters'
     expect(page).to have_content(shelter_1.name)
 
-    visit '/shelters/#{shelter_1.id}'
+    visit "/shelters/#{shelter_1.id}"
 
     click_on "Delete"
 
