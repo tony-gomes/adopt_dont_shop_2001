@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+
+/*Pet Index Styles*/
+
+.pet_matrix {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.pet_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.pet_image_block {
+  padding: 1em;
+}
+
+/*.pet_data_block {}*/ss
+/*.pet_data_block_name {}*/ss
+/*.pet_data_block_age {}*/ss
+/*.pet_data_block_sex {}*/ss
+/*.pet_data_block_shelter {}*/ss
