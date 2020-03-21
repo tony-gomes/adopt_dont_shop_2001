@@ -30,11 +30,11 @@ pet_1 = Pet.create(profile_img: "https://via.placeholder.com/300",
                    approximate_age: 8,
                    sex: "Nah",
                    adoption_status: "Deeply Loved",
-                   current_shelter_id: 1)
+                   current_shelter: "Doggie Dog World")
 pet_2 = Pet.create(profile_img: "https://via.placeholder.com/300",
                    name: "Delphi",
                    description: "Pellentesque accumsan faucibus elementum. Vivamus a faucibus enim. Donec fermentum tristique neque ac mollis. Pellentesque ullamcorper, ante sed ornare lacinia, augue leo congue eros, sed lacinia velit nibh at dolor. Aliquam suscipit purus id est tempus, at accumsan risus pulvinar.",
                    approximate_age: 4,
                    sex: "Nope",
                    adoption_status: "Loved Deeply",
-                   current_shelter_id: 2)
+                   current_shelter: "Doggie Dog World")
