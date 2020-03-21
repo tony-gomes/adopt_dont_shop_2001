@@ -1,0 +1,16 @@
+<a href="/pets">Pets Index</a>
+
+
+  <div class="pet_profile">
+    <div class="pet_image_block">
+      <%= image_tag(@pet.profile_img) %>
+    </div>
+
+    <div class="pet_data_block">
+      <h3 class="pet_data_block_name"><%= @pet.name %></h3>
+      <p class="pet_data_block_age">about: <%= @pet.description %> </p>
+      <p class="pet_data_block_sex">age: <%= @pet.approximate_age %></p>
+      <p class="pet_data_block_sex">sex: <%= @pet.sex %></p>
+      <p class="pet_data_block_shelter">adoption status: <%= @pet.adoption_status %></p>
+    </div>
+  </div>
