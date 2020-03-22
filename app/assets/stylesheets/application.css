@@ -14,29 +14,76 @@
  *= require_self
  */
 
+ /*Global Styles*/
+nav, body {
+  font-family: 'Roboto', sans-serif;
+ }
+
+/*Layout Styles*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 4em;
+}
+
+.nav-left-block {
+  padding: 0.25em;
+  max-height: 50px;
+}
+
+.logo {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.nav-right-block {
+  padding: 1em;
+}
+
+.nav-right-pets {
+  padding: 1em;
+  font-size: 1.25em;
+  color: red;
+}
+
+.nav-right-shelters {
+  padding: 1em;
+  font-size: 1.25em;
+  color: red;
+}
 
 /*Pet Index Styles*/
 
-.pet_matrix {
+.page-header-title {
+  text-align: center;
+}
+
+.pet-matrix {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: center;
 }
 
-.pet_block {
+.pet-block {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
   margin: 1em;
+  width: 35%;
+  background-color: #f1f1f1;
 }
 
-.pet_image_block {
+.pet-image-block {
   padding: 1em;
 }
 
-/*.pet_data_block {}*/
-/*.pet_data_block_name {}*/
-/*.pet_data_block_age {}*/
-/*.pet_data_block_sex {}*/
-/*.pet_data_block_shelter {}*/
+/*.pet-data-block-{}*/
+/*.pet-data-block-name {}*/
+/*.pet-data-block-age {}*/
+/*.pet-data-block-sex {}*/
+/*.pet-data-block-shelter {}*/
