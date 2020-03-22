@@ -20,15 +20,15 @@ RSpec.describe "As a visitor", type: :feature do
 
     visit "/shelters"
 
-    expect(page).to have_content(shelter_1.name)
+    expect(page).to have_link(shelter_1.name, href: "/shelters/#{shelter_1.id}")
     expect(page).to have_link(nil, href: "/shelters/#{shelter_1.id}/edit")
     find_link("Delete", href: "/shelters/#{shelter_1.id}").visible?
 
-    expect(page).to have_content(shelter_2.name)
+    expect(page).to have_link(shelter_2.name, href: "/shelters/#{shelter_2.id}")
     expect(page).to have_link(nil, href: "/shelters/#{shelter_2.id}/edit")
     find_link("Delete", href: "/shelters/#{shelter_2.id}").visible?
 
-    expect(page).to have_content(shelter_3.name)
+    expect(page).to have_link(shelter_3.name, href: "/shelters/#{shelter_3.id}")
     expect(page).to have_link(nil, href: "/shelters/#{shelter_3.id}/edit")
     find_link("Delete", href: "/shelters/#{shelter_3.id}").visible?
   end

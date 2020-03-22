@@ -13,7 +13,7 @@ RSpec.describe "As a visitor", type: :feature do
                                   description: "Proin et nisi tempus, pharetra nunc sit amet, vulputate nisl. Aenean ornare convallis posuere. Curabitur in elit vitae risus ultrices hendrerit et id orci. Curabitur nec sagittis risus, id rhoncus eros. Nullam sagittis pellentesque suscipit. Ut ornare aliquet metus. Cras porta nec mauris vitae lobortis.",
                                   approximate_age: 8,
                                   sex: "Nah",
-                                  adoption_status: "Deeply Loved",
+                                  adoption_status: "Adopted",
                                   current_shelter: "Doggie Dog World")
 
     pet_2 = shelter_1.pets.create(profile_img: "https://via.placeholder.com/300",
@@ -21,7 +21,7 @@ RSpec.describe "As a visitor", type: :feature do
                                   description: "Pellentesque accumsan faucibus elementum. Vivamus a faucibus enim. Donec fermentum tristique neque ac mollis. Pellentesque ullamcorper, ante sed ornare lacinia, augue leo congue eros, sed lacinia velit nibh at dolor. Aliquam suscipit purus id est tempus, at accumsan risus pulvinar.",
                                   approximate_age: 4,
                                   sex: "Nope",
-                                  adoption_status: "Loved Deeply",
+                                  adoption_status: "Adopted",
                                   current_shelter: "Doggie Dog World")
 
     visit "/pets/#{pet_2.id}"
@@ -31,12 +31,11 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_content(pet_2.description)
     expect(pet_2.approximate_age).to eq("4")
     expect(pet_2.sex).to eq("Nope")
-    expect(pet_2.adoption_status).to eq("Loved Deeply")
+    expect(pet_2.adoption_status).to eq("Adopted")
 
     expect(page).to have_no_content(pet_1.name)
     expect(page).to have_no_content(pet_1.description)
     expect(page).to have_no_content(pet_1.approximate_age)
     expect(page).to have_no_content(pet_1.sex)
-    expect(page).to have_no_content(pet_1.adoption_status)
   end
 end

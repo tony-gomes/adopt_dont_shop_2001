@@ -11,7 +11,7 @@
         <h3 class="pet_data_block_name"><%= pet.name %></h3>
         <p class="pet_data_block_age">age: <%= pet.approximate_age %> </p>
         <p class="pet_data_block_sex">sex: <%= pet.sex %></p>
-        <p class="pet_data_block_shelter">current shelter: <%= pet.current_shelter %></p>
+        <p class="pet_data_block_shelter">current shelter: <%= link_to pet.current_shelter, "/shelters/#{pet.shelter_id}" %></p>
       </div>
     <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %>
 <%= link_to "Delete", "/pets/#{pet.id}", method: :delete %>
