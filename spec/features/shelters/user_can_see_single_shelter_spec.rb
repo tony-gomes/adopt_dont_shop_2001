@@ -25,6 +25,7 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_content(shelter_1.city)
     expect(page).to have_content(shelter_1.state)
     expect(page).to have_content(shelter_1.zip)
+    find_link("See Our Pets",  href: "/shelters/#{shelter_1.id}/pets").visible?
 
     expect(page).to have_no_content(shelter_2.name)
     expect(page).to have_no_content(shelter_3.name)
