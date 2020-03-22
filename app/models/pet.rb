@@ -4,6 +4,5 @@ class Pet < ApplicationRecord
                         :description,
                         :approximate_age,
                         :sex,
-                        :adoption_status,
-                        :current_shelter
+                        :adoption_status
 end

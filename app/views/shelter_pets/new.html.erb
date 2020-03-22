@@ -1,0 +1,20 @@
+<%= form_tag("/shelters/#{@shelter_id}/pets", method: :post) do %>
+<% label_tag "Profile Image" %>
+<%= text_field_tag :profile_img %>
+
+<% label_tag "Name" %>
+<%= text_field_tag :name %>
+
+<% label_tag "Description" %>
+<%= text_field_tag :description %>
+
+<% label_tag "Age" %>
+<%= number_field_tag :approximate_age %>
+
+<%= radio_button_tag(:sex, "male") %>
+<%= label_tag(:sex_male, "Male") %>
+<%= radio_button_tag(:sex, "female") %>
+<%= label_tag(:sex_female, "Female") %>
+
+<%= submit_tag "Create Pet" %>
+<% end %>

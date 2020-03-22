@@ -8,7 +8,6 @@ describe Pet, type: :model do
     it { should validate_presence_of :approximate_age }
     it { should validate_presence_of :sex }
     it { should validate_presence_of :adoption_status }
-    it { should validate_presence_of :current_shelter }
   end
 
   describe "relationships" do
