@@ -13,6 +13,7 @@
         <p class="pet_data_block_sex">sex: <%= pet.sex %></p>
         <p class="pet_data_block_shelter">current shelter: <%= pet.current_shelter %></p>
       </div>
+    <%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
     </div>
   <% end %>
 </div>

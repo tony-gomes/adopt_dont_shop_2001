@@ -12,7 +12,7 @@ RSpec.describe "As a visitor", type: :feature do
                                city: "Denver",
                                state: "CO",
                                zip: "80212")
-    shelter_3 = Shelter.create(name: "Dog Lovers",
+    shelter_3 = Shelter.create(name: "Dogtopia",
                                address: "456 Rocky Road",
                                city: "Lala Land",
                                state: "North Nowhere",
@@ -21,7 +21,15 @@ RSpec.describe "As a visitor", type: :feature do
     visit "/shelters"
 
     expect(page).to have_content(shelter_1.name)
+    expect(page).to have_link(nil, href: "/shelters/#{shelter_1.id}/edit")
+    find_link("Delete", href: "/shelters/#{shelter_1.id}").visible?
+
     expect(page).to have_content(shelter_2.name)
+    expect(page).to have_link(nil, href: "/shelters/#{shelter_2.id}/edit")
+    find_link("Delete", href: "/shelters/#{shelter_2.id}").visible?
+
     expect(page).to have_content(shelter_3.name)
+    expect(page).to have_link(nil, href: "/shelters/#{shelter_3.id}/edit")
+    find_link("Delete", href: "/shelters/#{shelter_3.id}").visible?
   end
 end

@@ -12,7 +12,7 @@ RSpec.describe "As a visitor", type: :feature do
                                city: "Denver",
                                state: "CO",
                                zip: "80212")
-    shelter_3 = Shelter.create(name: "Dog Lovers",
+    shelter_3 = Shelter.create(name: "Dogtopia",
                                address: "456 Rocky Road",
                                city: "Lala Land",
                                state: "North Nowhere",

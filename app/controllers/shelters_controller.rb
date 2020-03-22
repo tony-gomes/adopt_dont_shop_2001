@@ -21,7 +21,7 @@ class SheltersController < ApplicationController
   def update
     edit_shelter = Shelter.find(params[:id])
     edit_shelter.update(edit_shelter_params)
-    edit_shelter.save
+    edit_shelter.save!
     redirect_to "/shelters/#{edit_shelter.id}"
   end
 

@@ -13,4 +13,8 @@
       <p class="pet_data_block_sex">sex: <%= @pet.sex %></p>
       <p class="pet_data_block_shelter">adoption status: <%= @pet.adoption_status %></p>
     </div>
+
+    <%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
+    <%= link_to "Delete", "/pets/#{@pet.id}", method: :delete %>
+
   </div>
