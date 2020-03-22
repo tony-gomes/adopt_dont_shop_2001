@@ -27,7 +27,7 @@ RSpec.describe "As a visitor", type: :feature do
     visit "/pets"
 
     page.has_css?("img[src*='https://via.placeholder.com/150']")
-    expect(page).to have_content(pet_1.name)
+    expect(page).to have_link(pet_1.name, href: "/pets/#{pet_1.id}")
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)
     expect(page).to have_content(pet_1.current_shelter)
@@ -36,7 +36,7 @@ RSpec.describe "As a visitor", type: :feature do
     find_link("Delete", href: "/pets/#{pet_1.id}").visible?
 
     page.has_css?("img[src*='https://via.placeholder.com/150']")
-    expect(page).to have_content(pet_2.name)
+    expect(page).to have_link(pet_2.name, href: "/pets/#{pet_2.id}")
     expect(page).to have_content(pet_2.approximate_age)
     expect(page).to have_content(pet_2.sex)
     expect(page).to have_content(pet_2.current_shelter)

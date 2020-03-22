@@ -38,13 +38,13 @@ RSpec.describe "as a visitor" do
     visit "/shelters/#{shelter_1.id}/pets"
 
     # need image
-    expect(page).to have_content(pet_1.name)
+    expect(page).to have_link(pet_1.name, href: "/pets/#{pet_1.id}")
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)
     expect(page).to have_link(nil, href: "/pets/#{pet_1.id}/edit")
 
     # need image
-    expect(page).to have_content(pet_2.name)
+    expect(page).to have_link(pet_2.name, href: "/pets/#{pet_2.id}")
     expect(page).to have_content(pet_2.approximate_age)
     expect(page).to have_content(pet_2.sex)
     expect(page).to have_link(nil, href: "/pets/#{pet_2.id}/edit")
