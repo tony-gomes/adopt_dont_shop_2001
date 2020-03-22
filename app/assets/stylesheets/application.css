@@ -59,6 +59,28 @@ nav {
   text-transform: uppercase;
 }
 
+/*Welcome Styles*/
+.welcome-message {
+  text-align: center;
+  font-size: 7em;
+  color: red;
+}
+
+.welcome-main-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+.shelter-block {
+  min-width: 33%;
+}
+
+.pet-block {
+  min-width: 33%;
+}
+
 /*Shelter Index Styles*/
 .shelter-matrix {
   display: flex;
