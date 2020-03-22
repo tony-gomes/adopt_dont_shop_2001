@@ -1,9 +1,25 @@
-<h1>All Shelters</h1>
+<h1 class="page-header-title">All Shelters</h1>
 
+<div class="shelter-matrix" >
 <% @shelters.each do |shelter| %>
-  <h3><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h3>
-  <%= link_to "Update Shelter", "/shelters/#{shelter.id}/edit" %>
-  <%= link_to "Delete", "/shelters/#{shelter.id}", method: :delete %>
-<% end %>
+    <div class="shelter-block">
+      <div class="shelter-data_block">
+        <h3 class="shelter-data-block-name"><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h3>
+      </div>
+      <div class="shelter-image-block">
+        <%= image_tag("https://via.placeholder.com/150") %>
+      </div>
+      <div class="shelter-link-block">
+        <%= link_to "Update Shelter", "/shelters/#{shelter.id}/edit" %>
+        <%= link_to "Delete", "/shelters/#{shelter.id}", method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="bottom-body-link">
+  <%= link_to "New Shelter", "/shelters/new", :class => "new-shelter-link" %>
+</div>
 
-<%= link_to "New Shelter", "/shelters/new" %>
+
+
+

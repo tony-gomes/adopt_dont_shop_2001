@@ -53,11 +53,53 @@ nav {
   color: red;
 }
 
-/*Pet Index Styles*/
-
 .page-header-title {
   text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
 }
+
+/*Shelter Index Styles*/
+.shelter-matrix {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.shelter-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+  width: 15%;
+  background-color: #f1f1f1;
+  align-items: center;
+}
+
+.shelter-image-block {
+  padding: 1em;
+}
+
+/*.shelter-data-block-{}*/
+/*.shelter-data-block-name {}*/
+
+.bottom-body-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.new-shelter-link {
+  font-size: 2em;
+  color: red;
+}
+
+/*Pet Index Styles*/
 
 .pet-matrix {
   display: flex;
