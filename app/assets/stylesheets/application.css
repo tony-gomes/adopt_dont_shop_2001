@@ -255,6 +255,11 @@ input[type=submit] {
 /*.pet-data-block-sex {}*/
 /*.pet-data-block-shelter {}*/
 
+.new-pet-link {
+  font-size: 2em;
+  color: red;
+}
+
 /*Pet Show Styles*/
 .pet-main-block {
   display: flex;

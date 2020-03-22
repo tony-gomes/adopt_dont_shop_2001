@@ -12,7 +12,7 @@ RSpec.describe "As a visitor", type: :feature do
                                   name: "Athena",
                                   description: "Proin et nisi tempus, pharetra nunc sit amet, vulputate nisl. Aenean ornare convallis posuere. Curabitur in elit vitae risus ultrices hendrerit et id orci. Curabitur nec sagittis risus, id rhoncus eros. Nullam sagittis pellentesque suscipit. Ut ornare aliquet metus. Cras porta nec mauris vitae lobortis.",
                                   approximate_age: 8,
-                                  sex: "Nah",
+                                  sex: "Female",
                                   adoption_status: "Adopted",
                                   current_shelter: "Doggie Dog World")
 
@@ -20,7 +20,7 @@ RSpec.describe "As a visitor", type: :feature do
                                   name: "Delphi",
                                   description: "Pellentesque accumsan faucibus elementum. Vivamus a faucibus enim. Donec fermentum tristique neque ac mollis. Pellentesque ullamcorper, ante sed ornare lacinia, augue leo congue eros, sed lacinia velit nibh at dolor. Aliquam suscipit purus id est tempus, at accumsan risus pulvinar.",
                                   approximate_age: 4,
-                                  sex: "Nope",
+                                  sex: "Female",
                                   adoption_status: "Adopted",
                                   current_shelter: "Doggie Dog World")
 
@@ -30,13 +30,11 @@ RSpec.describe "As a visitor", type: :feature do
     expect(pet_2.name).to eq("Delphi")
     expect(page).to have_content(pet_2.description)
     expect(pet_2.approximate_age).to eq("4")
-    expect(pet_2.sex).to eq("Nope")
+    expect(pet_2.sex).to eq("Female")
     expect(pet_2.adoption_status).to eq("Adopted")
 
     expect(page).to have_no_content(pet_1.name)
     expect(page).to have_no_content(pet_1.description)
-    expect(page).to have_no_content(pet_1.approximate_age)
-    expect(page).to have_no_content(pet_1.sex)
 
     # layout tests
     find_link("Pets", id: :nav_right_pets, href: "/pets").visible?

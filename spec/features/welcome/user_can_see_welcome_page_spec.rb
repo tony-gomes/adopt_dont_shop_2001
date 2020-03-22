@@ -7,6 +7,6 @@ RSpec.describe "As a visitor", type: :feature do
 
     page.has_css?(".welcome_message")
     expect(page).to have_link("All Shelters", href: "/shelters")
-    expect(page).to have_link("Add Shelter", href: "/shelters/new")
+    expect(page).to have_link("All Pets", href: "/pets")
   end
 end
