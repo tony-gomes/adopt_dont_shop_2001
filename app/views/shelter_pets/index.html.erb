@@ -1,19 +1,19 @@
-<h1 class="page_header_title">Shelter Pets Index Page</h1>
+<h1 class="page-header-title">Shelter Pets Index Page</h1>
 
-<div class="pet_matrix" >
+<div class="pet-matrix" >
 <% @shelter.pets.each do |pet| %>
-    <div class="pet_block">
-      <div class="pet_image_block">
+    <div class="pet-block">
+      <div class="pet-image-block">
         <%= image_tag(pet.profile_img) %>
       </div>
 
-      <div class="pet_data_block">
-        <h3 class="pet_data_block_name"><%= link_to pet.name, "/pets/#{pet.id}" %></h3>
-        <p class="pet_data_block_age">age: <%= pet.approximate_age %> </p>
-        <p class="pet_data_block_sex">sex: <%= pet.sex %></p>
+      <div class="pet-data-block">
+        <h3 class="pet-data-block-name"><%= link_to pet.name, "/pets/#{pet.id}" %></h3>
+        <p class="pet-data-block-age">age: <%= pet.approximate_age %> </p>
+        <p class="pet-data-block-sex">sex: <%= pet.sex %></p>
+          <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %>
+          <%= link_to "Delete", "/pets/#{pet.id}", method: :delete %>
       </div>
-    <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %>
-<%= link_to "Delete", "/pets/#{pet.id}", method: :delete %>
     </div>
   <% end %>
 </div>

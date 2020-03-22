@@ -81,6 +81,89 @@ nav {
   min-width: 33%;
 }
 
+/*Global Form Styling*/
+
+.main-form-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+input {
+  width: 100%;
+}
+
+input[type=radio] {
+}
+
+input[type=text] {
+  padding: 7px 7px;
+  margin: 10px 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.radio-toolbar {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 10px 20px;
+  margin: 1em;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px dashed black;
+  border-radius: 4px;
+  width: 5em;
+}
+
+.radio-toolbar label:hover {
+  background-color: red;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+  border: 2px dashed red;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: red;
+  border: 2px solid black;
+}
+
+input[type=submit] {
+  background-color: red;
+  font-size: 2em;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 /*Shelter Index Styles*/
 .shelter-matrix {
   display: flex;
@@ -121,6 +204,26 @@ nav {
   color: red;
 }
 
+/*Shelter Show Styles*/
+.shelter-main-block {
+  display: flex;
+  justify-content: center;
+}
+
+.shelter-profile {
+  display: flex;
+}
+
+.shelter-image-block {}
+
+.shelter-data-block {}
+
+.shelter-data-block-name {}
+
+.shelter-data-block-address {}
+
+.shelter-data-block-region {}
+
 /*Pet Index Styles*/
 
 .pet-matrix {
@@ -151,3 +254,14 @@ nav {
 /*.pet-data-block-age {}*/
 /*.pet-data-block-sex {}*/
 /*.pet-data-block-shelter {}*/
+
+/*Pet Show Styles*/
+.pet-main-block {
+  display: flex;
+  justify-content: center;
+}
+
+.pet-profile {
+  display: flex;
+  width: 50%;
+}
