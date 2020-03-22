@@ -25,5 +25,8 @@ RSpec.describe "As a visitor" do
 
     expect(current_path).to eq("/pets")
     expect(page).to have_no_content(pet_3.name)
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

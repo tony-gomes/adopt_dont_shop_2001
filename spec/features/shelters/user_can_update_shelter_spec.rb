@@ -38,5 +38,8 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_no_content("Denver")
     expect(page).to have_no_content("CO")
     expect(page).to have_no_content("80202")
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

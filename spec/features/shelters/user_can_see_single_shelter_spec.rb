@@ -28,5 +28,8 @@ RSpec.describe "As a visitor", type: :feature do
 
     expect(page).to have_no_content(shelter_2.name)
     expect(page).to have_no_content(shelter_3.name)
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

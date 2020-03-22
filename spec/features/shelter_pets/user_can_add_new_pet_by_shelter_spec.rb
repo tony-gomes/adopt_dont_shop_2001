@@ -21,5 +21,10 @@ RSpec.describe "as a visitor" do
     choose(pet_sex)
 
     click_on "Create Pet"
+
+    # need tests
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

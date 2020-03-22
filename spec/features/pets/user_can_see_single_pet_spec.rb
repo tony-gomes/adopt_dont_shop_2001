@@ -37,5 +37,8 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_no_content(pet_1.description)
     expect(page).to have_no_content(pet_1.approximate_age)
     expect(page).to have_no_content(pet_1.sex)
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

@@ -33,5 +33,8 @@ RSpec.describe "As a visitor" do
     # expext(page).to have_content(pet_3.description)
     # expect(:approximate_age).to eq(1.5)
     # expect(:sex).to eq("Female")
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end

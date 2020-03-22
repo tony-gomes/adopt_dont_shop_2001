@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AdoptDontShop</title>
+    <title>Adopt Don't Shop</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+
+  <nav>
+    <div id="nav_right" class="nav-right-block">
+      <a id="nav_right_pets" href="/pets">Pets</a>
+    </div>
+  </nav>
 
   <body>
     <%= yield %>

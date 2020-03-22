@@ -43,5 +43,8 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_link(pet_2.current_shelter, href: "/shelters/#{pet_2.shelter_id}")
     expect(page).to have_link(nil, href: "/pets/#{pet_2.id}/edit")
     find_link("Delete", href: "/pets/#{pet_2.id}").visible?
+
+    # layout tests
+    find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
   end
 end
