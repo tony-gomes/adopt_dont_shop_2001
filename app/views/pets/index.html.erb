@@ -14,6 +14,7 @@
         <p class="pet_data_block_shelter">current shelter: <%= pet.current_shelter %></p>
       </div>
     <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %>
+<%= link_to "Delete", "/pets/#{pet.id}", method: :delete %>
     </div>
   <% end %>
 </div>
