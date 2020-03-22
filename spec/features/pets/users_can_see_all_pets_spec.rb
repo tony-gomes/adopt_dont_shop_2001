@@ -31,11 +31,13 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)
     expect(page).to have_content(pet_1.current_shelter)
+    expect(page).to have_link(nil, href: "/pets/#{pet_1.id}/edit")
 
     page.has_css?("img[src*='https://via.placeholder.com/150']")
     expect(page).to have_content(pet_2.name)
     expect(page).to have_content(pet_2.approximate_age)
     expect(page).to have_content(pet_2.sex)
     expect(page).to have_content(pet_2.current_shelter)
+    expect(page).to have_link(nil, href: "/pets/#{pet_2.id}/edit")
   end
 end
