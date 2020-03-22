@@ -53,5 +53,6 @@ RSpec.describe "as a visitor" do
 
     # layout tests
     find_link("Pets", id: :nav_right_pets, href: "/pets").visible?
+    find_link("Shelters", id: :nav_right_shelters, href: "/shelters").visible?
   end
 end
