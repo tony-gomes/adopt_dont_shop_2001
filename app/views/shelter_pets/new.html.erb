@@ -14,6 +14,9 @@
         <%= label_tag :approximate_age %>
         <%= text_field_tag :approximate_age %>
 
+        <% label_tag :current_shelter %>
+        <%= text_field_tag :current_shelter, :value => "Dynamic method w/ Shelter ID?" %>
+
           <div class="radio-toolbar">
             <%= radio_button_tag(:sex, "male") %>
             <%= label_tag(:sex_male, "Male") %>
@@ -21,6 +24,6 @@
             <%= label_tag(:sex_female, "Female") %>
           </div>
 
-        <%= submit_tag "Submit" %>
+        <%= submit_tag "Create Pet" %>
       <% end %>
     </div>
